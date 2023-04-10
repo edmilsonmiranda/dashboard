@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --bg-color1: #f5f5f5;
+    --bg-color2: #F4511E;
+}
+
+body{
+    background-color: var(--bg-color1);
+}
+
+header{
+    width: 100%;
+    background-color: var(--bg-color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    transition: all 200ms ease;
+}
+
+header.light{
+    background-color: #FFFFFF;
+}
+
+header nav{
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    gap: 26px;
+    padding: 16px 0;
+}
+
+header nav ul li a{
+    line-height: 40px;
+    color: #FFFFFF;
+    position: relative;
+    display: inline-block;
+    transition: all 200ms ease;
+}
+
+header.light nav ul li a{
+    color: #000000;
+}
+
+header nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transition: all 200ms ease;
+}
+
+header nav ul li a:hover::after{
+    width: 30%;
+    left: 35%;
+}
+
+header nav ul li a.active{
+    color: #28ff07;
+    font-weight: bold;
+}
+
+header nav .mode{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav .mode ion-icon{
+    color: #FFFFFF;
+    transition: all 200ms ease;
+}
+
+header.light nav .mode ion-icon{
+    color: #28ff07;
+}
+
+header nav .mode .mode-switch{
+    width: 40px;
+    height: 20px;
+    background-color: #00000040;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .mode .mode-switch::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: all 200ms ease;
+}
+
+header.light nav .mode .mode-switch::after{
+    background-color: #28ff07;
+}
+
+header nav .mode .mode-switch.active::after{
+    left: 25px;
+}
