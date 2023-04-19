@@ -13,6 +13,7 @@
     --bg-color1: #f5f5f5;
     --bg-color2: #594a46;
     --bg-color3: #26ff05;
+    --bg-color4: #000000
 }
 
 body{
@@ -293,4 +294,23 @@ header nav .mode .mode-switch.active::after{
 
 #lateral button:hover span {
     color: var(--bg-color3);
+}
+
+.btn {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: var(--bg-color3);
+    color: var(--bg-color4);
+    border-radius: 20px;
+    transition-duration: 200ms;
+}
+
+.btn:hover {
+    background-color: var(--bg-color4);
+    color: var(--bg-color3);
+}
+
+.btn:last-child {
+    margin-left: 16px;
 }

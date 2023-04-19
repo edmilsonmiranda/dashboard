@@ -32,56 +32,13 @@
             <table id="tabela">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Categoria</th>
                     <th>Status</th>
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Destilados</td>
-                    <td>Ativo</td>
-                    <td>
-                        <div class="acoes">
-                            <ion-icon name="create"></ion-icon>
-                            <ion-icon name="trash"></ion-icon>
-                        </div>
-                    </td>
-                </tr>
-                <!-- espaço -->
-                <tr>
-                    <td>Fermentados</td>
-                    <td>Ativo</td>
-                    <td>
-                        <div class="acoes">
-                            <ion-icon name="create"></ion-icon>
-                            <ion-icon name="trash"></ion-icon>
-                        </div>
-                    </td>
-                </tr>
-                <!-- espaço -->
-                <tr>
-                    <td>Licores</td>
-                    <td>Ativo</td>
-                    <td>
-                        <div class="acoes">
-                            <ion-icon name="create"></ion-icon>
-                            <ion-icon name="trash"></ion-icon>
-                        </div>
-                    </td>
-                </tr>
-                <!-- espaço -->
-                <tr>
-                    <td>Refrigerantes</td>
-                    <td>Ativo</td>
-                    <td>
-                        <div class="acoes">
-                            <ion-icon name="create"></ion-icon>
-                            <ion-icon name="trash"></ion-icon>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
     </section>
@@ -89,10 +46,10 @@
     <aside id="lateral">
         <div class="conteudo">
             <h3>Criar <ion-icon class="fechar-lateral" name="close"></ion-icon></h3>
-            <form>
+            <form onsubmit="addCategoria()">
                 <label for="categoria">Categoria</label>
                 <input type="text" id="categoria" placeholder="Digite a categoria" required>
-                <button>
+                <button type="submit">
                     <span>
                         <ion-icon name="save"></ion-icon> Salvar
                     </span>
@@ -100,15 +57,13 @@
             </form>
         </div>
     </aside>
+    
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="/js/scripts.js"></script>
-    <script>
-        let table = new DataTable('#tabela', {
-            responsive: true
-        });
-    </script>
+    <script src="/js/categorias.js"></script>
+
 </body>
 </html>
